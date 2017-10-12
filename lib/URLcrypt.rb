@@ -7,7 +7,7 @@ module URLcrypt
   TABLE = "1bcd2fgh3jklmn4pqrstAvwxyz567890".freeze
 
   def self.key=(key)
-    @key = key
+    @key = key[0..31]
   end
 
   class Chunk
